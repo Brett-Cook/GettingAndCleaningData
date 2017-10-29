@@ -58,4 +58,4 @@ setwd("C:/Users/brcook/Coursera/Getting & Cleaning Data")
   
 # 5. Create a tidy data set with the average of each variable for each activity and each subject.
   TidyData <- SelectedData %>% group_by(Activity,Subject) %>% summarize_all(funs(mean))
-  write.table(TidyData,"TidyData.txt")
+  write.table(TidyData,"TidyData.txt", row.names = FALSE)
